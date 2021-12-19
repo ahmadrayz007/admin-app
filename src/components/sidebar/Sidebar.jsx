@@ -1,92 +1,51 @@
 import "./sidebar.css";
 import {
-  LineStyle,
-  Timeline,
-  TrendingUp,
   PersonOutline,
-  StorefrontOutlined,
-  AttachMoneyOutlined,
-  BarChartOutlined,
-  EmailOutlined,
-  DynamicFeedOutlined,
-  ChatBubbleOutlineOutlined,
-  WorkOutlineOutlined,
-  Report
+  Podcasts,
+  Article,
+  EventAvailable,
 } from "@mui/icons-material/";
+import { Link } from 'react-router-dom'
 
 export default function Sidebar() {
   return (
     <div className="sidebar">
       <div className="sidebarWrapper">
         <div className="sidebarMenu">
-          <h3 className="sidebarTitle">Dashboard</h3>
-          <ul className="sidebarList">
-            <li className="sidebarListItem active">
-              <LineStyle className="sidebarIcon" />
-              Home
-            </li>
-            <li className="sidebarListItem">
-              <Timeline className="sidebarIcon" />
-              Analytics
-            </li>
-            <li className="sidebarListItem">
-              <TrendingUp className="sidebarIcon" />
-              Sales
-            </li>
-          </ul>
-        </div>
-        <div className="sidebarMenu">
-          <h3 className="sidebarTitle">Quick Menu</h3>
+          <h3 className="sidebarTitle">Pengguna</h3>
           <ul className="sidebarList">
             <li className="sidebarListItem">
+              <Link to="/users" style={{ textDecoration: 'none', color: 'inherit', margin: 0, padding : 0}}>
               <PersonOutline className="sidebarIcon" />
               Users
-            </li>
-            <li className="sidebarListItem">
-              <StorefrontOutlined className="sidebarIcon" />
-              Products
-            </li>
-            <li className="sidebarListItem">
-              <AttachMoneyOutlined className="sidebarIcon" />
-              Transactions
-            </li>
-            <li className="sidebarListItem">
-              <BarChartOutlined className="sidebarIcon" />
-              Reports
+              </Link>
             </li>
           </ul>
         </div>
         <div className="sidebarMenu">
-          <h3 className="sidebarTitle">Notifications</h3>
+          <h3 className="sidebarTitle">Pesan Broadcast</h3>
           <ul className="sidebarList">
             <li className="sidebarListItem">
-              <EmailOutlined className="sidebarIcon" />
-              Mail
-            </li>
-            <li className="sidebarListItem">
-              <DynamicFeedOutlined className="sidebarIcon" />
-              Feedback
-            </li>
-            <li className="sidebarListItem">
-              <ChatBubbleOutlineOutlined className="sidebarIcon" />
-              Messages
+              <Podcasts className="sidebarIcon" />
+              Broadcast
             </li>
           </ul>
         </div>
         <div className="sidebarMenu">
-          <h3 className="sidebarTitle">Staff</h3>
+          <h3 className="sidebarTitle">Tulis Artikel</h3>
           <ul className="sidebarList">
             <li className="sidebarListItem">
-              <WorkOutlineOutlined className="sidebarIcon" />
-              Manage
+              <Article className="sidebarIcon" />
+              Artikel
             </li>
+          </ul>
+        </div>
+        <div className="sidebarMenu">
+          <h3 className="sidebarTitle">Event Kalender</h3>
+          <ul className="sidebarList">
             <li className="sidebarListItem">
-              <Timeline className="sidebarIcon" />
-              Analytics
-            </li>
-            <li className="sidebarListItem">
-              <Report className="sidebarIcon" />
-              Reports
+              <EventAvailable className="sidebarIcon" />
+              Kalender
             </li>
           </ul>
         </div>
