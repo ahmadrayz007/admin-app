@@ -5,7 +5,7 @@ import {
   Article,
   EventAvailable,
 } from "@mui/icons-material/";
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 export default function Sidebar() {
   return (
@@ -14,12 +14,20 @@ export default function Sidebar() {
         <div className="sidebarMenu">
           <h3 className="sidebarTitle">Pengguna</h3>
           <ul className="sidebarList">
-            <li className="sidebarListItem">
-              <Link to="/users" style={{ textDecoration: 'none', color: 'inherit', margin: 0, padding : 0}}>
-              <PersonOutline className="sidebarIcon" />
-              Users
-              </Link>
-            </li>
+            <Link
+              to="/users"
+              style={{
+                textDecoration: "none",
+                color: "inherit",
+                margin: 0,
+                padding: 0,
+              }}
+            >
+              <li className="sidebarListItem">
+                <PersonOutline className="sidebarIcon" />
+                Users
+              </li>
+            </Link>
           </ul>
         </div>
         <div className="sidebarMenu">
@@ -43,10 +51,20 @@ export default function Sidebar() {
         <div className="sidebarMenu">
           <h3 className="sidebarTitle">Event Kalender</h3>
           <ul className="sidebarList">
-            <li className="sidebarListItem">
-              <EventAvailable className="sidebarIcon" />
-              Kalender
-            </li>
+            <Link
+              to="/event"
+              style={{
+                textDecoration: "none",
+                color: "inherit",
+                margin: 0,
+                padding: 0,
+              }}
+            >
+              <li className="sidebarListItem">
+                <EventAvailable className="sidebarIcon" />
+                Kalender
+              </li>
+            </Link>
           </ul>
         </div>
       </div>
