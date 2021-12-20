@@ -1,5 +1,6 @@
 import "./userList.css";
 import { DataGrid } from "@mui/x-data-grid";
+import Button from '@mui/material/Button';
 
 const columns = [
   { field: "id", headerName: "ID", width: 70 },
@@ -38,14 +39,21 @@ const rows = [
 
 export default function UserList() {
   return (
-    <div style={{ height: 400, width: "100%" }}>
-      <DataGrid
-        rows={rows}
-        columns={columns}
-        pageSize={5}
-        rowsPerPageOptions={[5]}
-        checkboxSelection
-      />
+    <div className="userList">
+      <div className="topBarList">
+        <h2 className="titleList">User List</h2>
+        <Button variant="contained">Add New User</Button>
+
+      </div>
+      <div style={{ height: 400, width: "100%" }}>
+        <DataGrid
+          rows={rows}
+          columns={columns}
+          pageSize={5}
+          rowsPerPageOptions={[5]}
+          checkboxSelection
+        />
+      </div>
     </div>
   );
 }
